@@ -33,11 +33,9 @@ addict = "^2.4.0"
 
 [tool.poe.tasks]
 install-torchsparse = "pip install git+https://github.com/mit-han-lab/torchsparse.git"
-install-flash-attn = "pip install ninja flash-attn --no-build-isolation"
 install-torch-scatter = "pip install torch-scatter -f https://data.pyg.org/whl/torch-2.4.0+cu124.html"
 install-spconv = "pip install timm spconv-cu120"
 install-sonata = [
-    "install-flash-attn",
     "install-torch-scatter",
     "install-spconv",
 ]
